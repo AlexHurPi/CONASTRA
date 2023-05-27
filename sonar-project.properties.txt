@@ -1,0 +1,3 @@
+D:\CURSOS\CECEP\PROYECTO\VISUAL STUDIO C#\CONASTRA\Xamarin6
+sonar.projectkey=my:proyecto
+sonar.cxx.file.suffixes=.sln
