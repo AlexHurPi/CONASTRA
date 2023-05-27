@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.AdministradorFoto"
+            NavigationPage.HasNavigationBar="False">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Image  Grid.Column="0"
+                Grid.ColumnSpan="4"                 
+                Source="{Binding Foto}"
+                BackgroundColor="AliceBlue"/>
+        <Button Text="Tomar Foto"
+                FontSize="Body"
+                Command="{Binding IrTomarFotoCommand}"
+                Grid.Row="2"
+                Grid.ColumnSpan="2"
+                Grid.Column="1"
+                BackgroundColor="Aqua"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand"/>
+        <Button Text="volver"
+                Grid.ColumnSpan="2"
+                Command="{Binding VolverCommand}"
+                Grid.Row="3"
+                Grid.Column="1"                
+                BackgroundColor="Aqua"
+                CornerRadius="10"
+                HorizontalOptions="FillAndExpand"/>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.User1"
+             BackgroundColor="AliceBlue"
+             Title="User (Ingresar Empleado)" 
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+        
+          <StackLayout  Orientation="Horizontal"
+                        HeightRequest="40"
+                        Margin="0,0,0,50">
+                <Image  Source="Casco.png"
+                        Aspect="AspectFit"
+                        Margin="20,0,0,0" />
+                <Label  Text="CONASTRA"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        TextColor="Blue"
+                        HorizontalOptions="Start"
+                        Margin="20,0,0,0" />
+                
+        </StackLayout>
+        
+          <Frame VerticalOptions="FillAndExpand"
+                       Margin="15,0,15,15"
+                       CornerRadius="20"
+                       BackgroundColor="#EDEAE6">
+          <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+
+            </Grid.RowDefinitions >
+            <Label Text="Ingresar Usuario"                                    
+                       FontSize="Body"
+                       FontAttributes="Bold"
+                       TextColor="Blue"                      
+                       Margin="20,0,0,20" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       HorizontalOptions="Center"/>
+            <Button Text="Huella"
+                       BackgroundColor="Aqua"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="Caption"
+                       CornerRadius="10"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2" 
+                       Command="{Binding IrUserHuellaCommand}"/>
+            <Button Text="QR"                        
+                       BackgroundColor="Aqua"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="Caption"
+                       CornerRadius="10"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Command="{Binding IrUserQRCommand}"/>
+            <Button Text="Cedula"                  
+                       BackgroundColor="Aqua"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="Caption"
+                       CornerRadius="10"
+                       Grid.Row="3"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2"
+                       Command="{Binding IrUserCedulaCommand}"/>
+            <Label Text="Datos de ingreso:"
+                        Grid.Row="4"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4" 
+                       TextColor="#113DF0" 
+                       FontSize="Body"
+                       FontAttributes="Bold"/>
+            <Entry BackgroundColor="White"
+                       TextColor="Black"
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4" 
+                       Placeholder="DD/MM/AAAA hora:" 
+                       FontSize="Body"
+                       PlaceholderColor="#A39898" 
+                       IsReadOnly="True"
+                       x:Name="Date"
+                       Text="{Binding Fecha}"/>
+            <Entry     BackgroundColor="White"
+                       TextColor="Black"
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4" 
+                       Placeholder="Nombre"
+                       PlaceholderColor="#A39898"
+                       FontSize="Body"
+                       IsReadOnly="True"
+                       x:Name="Nombre"
+                       Text="{Binding Nombre}"/>
+            
+            <Button    Text="Guardar" 
+                       BackgroundColor="Aqua"
+                       CornerRadius="10"                        
+                       FontSize="Micro"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       Grid.Row="8"
+                       Grid.Column="0"  
+                       Grid.ColumnSpan="2"
+                       Command="{Binding GuardarCommand}"
+                       HorizontalOptions="FillAndExpand"/>
+                <Button    Text="Volver "
+                        BackgroundColor="Aqua"                  
+                       FontSize="Caption"
+                       HorizontalOptions="FillAndExpand"
+                       CornerRadius="10"
+                       Grid.Row="8"
+                       Grid.Column="2"  
+                       Grid.ColumnSpan="2"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       Command="{Binding VolverCommand}"/>
+          </Grid>
+        </Frame>        
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.CargandoPerfil">
+  <StackLayout BackgroundColor="AliceBlue"
+                 HorizontalOptions="StartAndExpand" >
+        <Image  Source="Casco.png"
+                Scale="0.2"
+                TranslationY="-70"
+                TranslationX="-130" />
+        <Label Text="CONASTRA"
+                FontSize="Title"
+                FontAttributes="Bold"
+                TextColor="Blue"
+                HorizontalOptions="Center"
+                Margin="0,-250,0,0" />
+        <Label  Text="(Restablecer Contraseña)"
+                TextColor="Blue"
+                FontAttributes="Bold"
+                FontSize="Micro"
+                HorizontalTextAlignment="Center" />
+        <Frame  Margin="25,20,25,25"
+                CornerRadius="10"
+                BackgroundColor="#EDEAE6"
+                Padding="20,50,50,450">
+            <StackLayout BackgroundColor="Red">
+                
+                    <Label  Text="Cargando su perfil"
+                            TextColor="Blue"
+                            HorizontalTextAlignment="Center"
+                            VerticalTextAlignment="End"/>
+                <StackLayout BackgroundColor="Red">
+                    <ProgressBar BackgroundColor="Blue" />
+                </StackLayout>
+            </StackLayout>
+        
+        </Frame>
+    </StackLayout>
+</ContentPage>

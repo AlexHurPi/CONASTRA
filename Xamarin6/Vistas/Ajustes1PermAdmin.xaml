@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.Ajustes1PermAdmin"
+    BackgroundColor="AliceBlue"
+             Title="Ajustes (Permisos Administrador)" 
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal"
+                     HeightRequest="40"
+                     Margin="0,0,0,50">
+                <Image Source="Casco.png"
+                   Aspect="AspectFit"
+                   Margin="20,0,0,0" />
+                <Label Text="CONASTRA"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   TextColor="Blue"
+                   HorizontalOptions="Start"
+                   Margin="20,0,0,0" />
+            </StackLayout>
+
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="15,0,15,15"
+                   CornerRadius="20"
+                   BackgroundColor="#EDEAE6"
+                   >
+                <Grid RowSpacing="15"
+                    Margin="0,30,0,30">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Datos del empleado"
+                           TextColor="Blue"
+                           Grid.Row="0"
+                           Grid.ColumnSpan="3"
+                           FontAttributes="Bold"
+                           FontSize="Subtitle"/>
+                    <Label Text="Nombre:"
+                           TextColor="Blue"
+                           FontAttributes="Bold"
+                            Grid.Row="1"
+                            Grid.Column="0"/>
+                    <Entry  Text="{Binding EntryNombre}"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="3"
+                            BackgroundColor="White"/>
+                    <Label  Text="Permiso Administrador"
+                            Grid.Row="3"
+                            Grid.ColumnSpan="3"
+                            TextColor="Blue"/>
+                    <Switch Grid.Column="2"
+                            Grid.Row="3"
+                            VerticalOptions="Start"
+                            IsToggled="{Binding SwitchOnCommand}"/>
+                    <Label  Text="{Binding Administrador}"
+                            Grid.Row="4"
+                            Grid.ColumnSpan="3"
+                            TextColor="Red"/>
+                    <Button Text="Guardar"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"                            
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding GuardarCommand}"/>
+                    <Button Text="Volver"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"                            
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="8"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding VolverCommand}"/>
+                </Grid>
+            </Frame>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.AdministradorHabilitar"
+    BackgroundColor="AliceBlue"
+             Title="Administrador (Habilitar / Deshabilitar)" 
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+        <StackLayout >
+            <StackLayout Orientation="Horizontal"
+                         HeightRequest="40">
+                <Image Source="Casco.png"
+                       Aspect="AspectFit"
+                       Margin="20,0,0,0"/>
+                <Label Text="CONASTRA"
+                       FontSize="Title"
+                       FontAttributes="Bold"
+                       TextColor="Blue"
+                       HorizontalOptions="Start"
+                       Margin="20,0,0,0" />
+            </StackLayout>
+            <ScrollView >
+                <Frame  VerticalOptions="FillAndExpand"
+                        Margin="15,0,15,25"
+                        CornerRadius="20"
+                        BackgroundColor="#EDEAE6">
+                    <StackLayout >
+                        <StackLayout>
+                            <Label Text="Datos del Empleado"
+                        TextColor="Blue"
+                        HorizontalOptions="Center"
+                        FontSize="Subtitle"
+                        FontAttributes="Bold"/>
+                        </StackLayout>
+                        <Grid RowSpacing="3">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                                
+                            </Grid.RowDefinitions>
+                            <Label  Text="Nombre:"
+                            HorizontalOptions="Start"
+                            VerticalOptions="Center"
+                            Grid.Row="0"
+                            Grid.Column="0"                            
+                            TextColor="Blue"/>
+                            <Entry  Placeholder="Nombre"
+                            Text="Alexander"
+                            FontSize="Micro"
+                            TextColor="Black"                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Text="Apellidos:"
+                            TextColor="Blue" />
+                            <Entry  Placeholder="Apellidos"
+                            Text="Hurtado"
+                            FontSize="Micro"
+                            TextColor="Black"                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="1"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2" IsReadOnly="False"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Text="Cedula:"
+                            TextColor="Blue" />
+                            <Entry  Placeholder="Cedula"
+                                    Text="5544"
+                                FontSize="Micro"
+                            TextColor="Black"                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="2"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2" 
+                            Keyboard="Numeric"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Text="Edad:"
+                            TextColor="Blue" />
+                            <Entry  FontSize="Micro"
+                                    Text="43"
+                            TextColor="Black"
+                            Placeholder="Edad"
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="3"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Keyboard="Numeric"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Text="Empresa:"
+                            TextColor="Blue" />
+                            <Entry Placeholder="Empresa" 
+                                    Text="CECEP"
+                                   FontSize="Micro"
+                                    TextColor="Black"
+                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="4"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2" />
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="5"
+                            Grid.Column="0"
+                            Text="No Celular:"
+                            TextColor="Blue" />
+                            <Entry Placeholder="No. Celular" 
+                                   Text="123456" 
+                                   FontSize="Micro"
+                            TextColor="Black"                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Keyboard="Telephone"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="6"
+                            Grid.Column="0"
+                            Text="Direccion:"
+                            TextColor="Blue" />
+                            <Entry Placeholder="Direccion" 
+                                Text="Calle1 Cra1"
+                                   FontSize="Micro"
+                            TextColor="Black"                            
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="6"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2" />
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="7"
+                            Grid.Column="0"
+                            Text="Correo:"
+                            TextColor="Blue" />
+                            <Entry  Placeholder="Email"
+                                    Text="alexander@cecep.edu.co"
+                            FontSize="Micro"
+                            TextColor="Black"                                
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="7"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Keyboard="Email"
+                            IsReadOnly="True"/>
+                            <Label  VerticalOptions="Center"
+                            Grid.Row="8"
+                            Grid.Column="0"
+                            Text="Fecha:"
+                            TextColor="Blue"/>
+                            <Entry  Placeholder="Fecha"
+                            FontSize="Caption"
+                            TextColor="Black"                                
+                            BackgroundColor="White"
+                            PlaceholderColor="#EDEAE6"
+                            Grid.Row="8"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"                            
+                            IsReadOnly="True"
+                            Text="{Binding Creation_Date}"/>
+                            <Button Text="Volver"
+                            Grid.Row="11"
+                            Grid.Column="1"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"
+                            Margin="0,10,0,0"
+                            TextColor="Blue"                            
+                            TextTransform="None"
+                            Command="{Binding VolverCommand}"/>
+                            <Button Text="Guardar"                            
+                            BackgroundColor="Aqua"
+                            TextTransform="None"
+                            TextColor="Blue"
+                            Grid.Row="11"
+                            Grid.Column="2"
+                            Margin="0,10,0,0"
+                            CornerRadius="10"
+                            Command="{Binding GuardarCommand}"/>
+                            <Label 
+                                   TextColor="Red"
+                                    Grid.Row="9"
+                                    Grid.Column="1"
+                                   VerticalOptions="End"
+                                   Text="{Binding Texto}"/>
+                            <Label Text="Habilitar / Deshabilitar"
+                                   TextColor="Blue"
+                                   Grid.Row="10"
+                                    Grid.Column="0"
+                                   Grid.ColumnSpan="2"
+                                   VerticalOptions="Center"/>                            
+                            <Switch Grid.Row="10"
+                                    Grid.Column="2"
+                                HorizontalOptions="Center"
+                                   IsToggled="{Binding HabilitarCommand}" 
+                                    />
+                        </Grid>
+                    </StackLayout>
+                </Frame>
+            </ScrollView>
+
+        </StackLayout>
+
+    </StackLayout>
+
+</ContentPage>

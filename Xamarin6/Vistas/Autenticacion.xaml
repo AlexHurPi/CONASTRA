@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.Autenticacion"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <StackLayout 
+            BackgroundColor="AliceBlue">
+      <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+        <Image Source="Casco.png"
+               Scale="0.9"              
+               Grid.Row="0"
+               Grid.Column="0"/>
+        <Label Text="CONASTRA"
+               VerticalOptions="Center"
+               FontSize="Title"
+               FontAttributes="Bold"
+               TextColor="Blue"              
+               Grid.Row="0"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <Label Text="(Autenticacion)" 
+               TextColor="Blue"
+               FontAttributes="Bold"
+               FontSize="Body"               
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+      </Grid>
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="25"
+               CornerRadius="20"
+               BackgroundColor="#EDEAE6">
+           <StackLayout VerticalOptions="CenterAndExpand"                        
+                        Padding="0, 80">
+                <Entry Placeholder="Usuario"
+                       PlaceholderColor="#00B2FA"
+                       TextColor="Black"
+                       BackgroundColor="#EDEAE6"
+                       Text="{Binding UAdmin}"/>
+                <Entry Placeholder="Contraseña"
+                       PlaceholderColor="#00B2FA"
+                       TextColor="Black"
+                       IsPassword="True"
+                       BackgroundColor="#EDEAE6"
+                       Text="{Binding PassAdmin}"/>
+                <Button Text="Iniciar Sesion"
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        CornerRadius="20"
+                        TranslationY="10"
+                        Command="{Binding IrAdmon1Command}"/>
+                <Button Text="¿Olvido la Contraseña?"
+                        FontSize="Micro"
+                        BackgroundColor="#EDEAE6"
+                        TextColor="Blue"
+                        CornerRadius="20"
+                        TranslationY="10" 
+                        TextTransform="Lowercase"
+                        x:Name="Olvido"
+                        Clicked="Olvido_Clicked"/>
+                <Button Text="Volver"
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        FontSize="Micro"
+                        TranslationY="80"
+                        x:Name="volver"
+                        Clicked="Volver"
+                        TextTransform="None"
+                        Command="{Binding VolverCommand}"/>               
+            </StackLayout>
+            </Frame>
+        </StackLayout>
+</ContentPage>

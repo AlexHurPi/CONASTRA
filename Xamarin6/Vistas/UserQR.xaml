@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.UserQR"
+    BackgroundColor="AliceBlue"
+             Title="User (Ingresar QR)" 
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HeightRequest="40"
+                     Margin="0,0,0,50">
+            <Image Source="Casco.png"
+                   Aspect="AspectFit"
+                   Margin="20,0,0,0" />
+            <Label Text="CONASTRA"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   TextColor="Blue"
+                   HorizontalOptions="Start"
+                   Margin="20,0,0,0" />
+        </StackLayout>
+        <Frame VerticalOptions="FillAndExpand"
+               Margin="15,0,15,15"
+               CornerRadius="20"
+               BackgroundColor="#EDEAE6">
+            <StackLayout>
+
+                <Label Text="Ingresar Usuario por QR"
+                       FontSize="Medium"
+                       FontAttributes="Bold"
+                       TextColor="Blue"
+                       HorizontalOptions="Start"
+                       Margin="20,0,0,0"/>
+                <Frame VerticalOptions="FillAndExpand"
+                       Margin="0,0,0,100">
+                    <Image Source="ImagenQR.png">
+                        
+                    </Image>
+                   
+                </Frame>
+
+                <Button Text="Capturar"
+                        VerticalOptions="Center"                        
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        FontSize="Body"
+                        CornerRadius="10"
+                        Command="{Binding SensorCommand}"/>
+            </StackLayout>
+
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.Auditoria1"
+    BackgroundColor="AliceBlue"
+             Title="Administrador (Auditoria)" 
+             NavigationPage.HasBackButton="False">
+    <StackLayout>
+
+        <StackLayout    Orientation="Horizontal"
+                        HeightRequest="40"
+                        Margin="0,0,0,50">
+            <Image      Source="Casco.png"
+                        Aspect="AspectFit"
+                        Margin="20,0,0,0" />
+            <Label      Text="CONASTRA"
+                        FontSize="Title"
+                        FontAttributes="Bold"
+                        TextColor="Blue"
+                        HorizontalOptions="Start"
+                        Margin="20,0,0,0" />
+        </StackLayout>
+
+        <Frame         VerticalOptions="FillAndExpand"
+                       Margin="15,0,15,15"
+                       CornerRadius="20"
+                       BackgroundColor="#EDEAE6">
+            <Grid      RowSpacing="15"
+                       ColumnSpacing="5"
+                       Margin="0,30,0,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+
+                </Grid.RowDefinitions >
+                <Label Text="Ingresar Datos para la auditoria"                                    
+                       FontSize="Body"
+                       FontAttributes="Bold"
+                       TextColor="Blue"                      
+                       Margin="20,0,0,0" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="4"
+                       HorizontalOptions="Center"/>
+                <Label Text="Fecha Inicial:"                                   
+                       FontSize="Caption"
+                       FontAttributes="Bold"
+                       TextColor="Blue"                      
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                <Entry Text="{Binding FechaInicial}"
+                        Placeholder="DD/MM/AAAA"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="3"                       
+                       FontSize="Body"
+                       PlaceholderColor="#A39898"
+                       />
+                <Label Text="Fecha Final:"                                   
+                       FontSize="Caption"
+                       FontAttributes="Bold"
+                       TextColor="Blue"                
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Start"
+                       VerticalOptions="Center"/>
+                <Entry Placeholder="DD/MM/AAAA"
+                       BackgroundColor="White"
+                       TextColor="Black"
+                       Grid.Row="2"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="3"                       
+                       FontSize="Body"
+                       PlaceholderColor="#A39898"
+                       Text="{Binding FechaFinal}"/>
+                <Button Text="Generar"
+                       BackgroundColor="Aqua"
+                       TextColor="Blue"
+                       FontAttributes="Bold"
+                       FontSize="Body"
+                       CornerRadius="10"
+                       Grid.Row="4"
+                       Grid.Column="1"
+                       Grid.ColumnSpan="2" 
+                       TextTransform="None" 
+                       Command="{Binding GenerarCommand}"/>
+                <Button Text="Volver "
+                        BackgroundColor="Aqua"                        
+                        FontSize="Caption"
+                        HorizontalOptions="FillAndExpand"
+                        CornerRadius="10"
+                        Grid.Row="7"
+                        Grid.Column="2"
+                        Grid.ColumnSpan="2" 
+                        HeightRequest="20"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        Command="{Binding VolverCommand}"/>
+            </Grid>
+        </Frame>
+    </StackLayout>
+</ContentPage>

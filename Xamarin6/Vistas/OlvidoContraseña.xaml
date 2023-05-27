@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.OlvidoContraseña"
+             NavigationPage.HasNavigationBar="False"
+             Visual="Material">
+    <StackLayout BackgroundColor="AliceBlue">      
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70"/>
+                <RowDefinition Height="*"/>                
+            </Grid.RowDefinitions>
+        <Image Source="Casco.png"
+               Scale="0.9"              
+               Grid.Row="0"
+               Grid.Column="0"/>
+        <Label Text="CONASTRA"
+               VerticalOptions="Center"
+               FontSize="Title"
+               FontAttributes="Bold"
+               TextColor="Blue"              
+               Grid.Row="0"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        <Label Text="(Restablecer Contraseña)" 
+               TextColor="Blue"
+               FontAttributes="Bold"
+               FontSize="Body"               
+               Grid.Row="1"
+               Grid.Column="1"
+               Grid.ColumnSpan="2"/>
+        </Grid>       
+          <Frame Margin="15,0,15,15"
+               CornerRadius="10"
+               BackgroundColor="#EDEAE6"
+               VerticalOptions="EndAndExpand">           
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Text="Se restablecera su contraseña y se enviara a su E-Mail Registrado"
+                       TextColor="Blue"
+                       Grid.Row="0"/>
+                <Entry Placeholder="Usuario"
+                       PlaceholderColor="#00B2FA"
+                       TextColor="Black"
+                       BackgroundColor="#EDEAE6"
+                       Grid.Row="1"
+                       Text="{Binding Usuario}"/>
+                <Entry Placeholder="Cedula"
+                       PlaceholderColor="#00B2FA"
+                       TextColor="Black"
+                       Keyboard="Numeric"
+                       x:Name="cedula"
+                       BackgroundColor="#EDEAE6"
+                       Grid.Row="2"
+                       Text="{Binding Cedula}"/> 
+                <Button Text="Restablecer"
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        CornerRadius="20"
+                        TextTransform="None"
+                        FontAttributes="Bold"
+                        Grid.Row="3"
+                        FontSize="Body"
+                        Command="{Binding RestablecerCommand}"/>
+                <Button Text="Volver"
+                        HorizontalOptions="CenterAndExpand"
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        CornerRadius="10"
+                        FontSize="Body"
+                        TextTransform="None"
+                        Command="{Binding VolverCommand}"
+                        Grid.Row="4"
+                        VerticalOptions="End"/>
+            </Grid>            
+          </Frame>        
+    </StackLayout>
+</ContentPage>

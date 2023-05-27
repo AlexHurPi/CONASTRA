@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.PaginaInicio"
+             NavigationPage.HasNavigationBar="False">
+    <StackLayout BackgroundColor="AliceBlue"
+                 HorizontalOptions="FillAndExpand"
+                 VerticalOptions="FillAndExpand">
+        <Label Text="CONASTRA"
+               FontSize="Title"
+               FontAttributes="Bold"
+               TextColor="Blue"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"
+               Padding="10,20,0,0" />
+        <Frame VerticalOptions="FillAndExpand"
+               HorizontalOptions="Center"
+               Margin="25"
+               CornerRadius="20"
+               BackgroundColor="#EDEAE6">
+            <StackLayout
+                Spacing="25">
+                <Image  Source="Casco.png"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        Scale="0.7" />
+                <Label  Text="Control de Asistencia al Trabajo"
+                        TextColor="Blue"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        FontSize="Default"
+                        FontAttributes="Bold" />
+                <Button Text="Administrador"
+                        VerticalOptions="EndAndExpand"
+                        BackgroundColor="Aqua"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        FontSize="Body"
+                        CornerRadius="10"
+                        Command="{Binding AdministradorCommand}" />
+                <Button Text="Usuario"
+                        TextColor="Blue"
+                        FontAttributes="Bold"
+                        FontSize="Body"
+                        BackgroundColor="Aqua"
+                        CornerRadius="10"
+                        VerticalOptions="End"
+                        Command="{Binding AdministradorCommand}"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Xamarin6.Vistas.Administrador0"
+             BackgroundColor="AliceBlue"
+             Title="Administrador (Inicio)" 
+             NavigationPage.HasBackButton="False">
+  <StackLayout>
+    <StackLayout>
+        <StackLayout Orientation="Horizontal"
+                     HeightRequest="40"
+                     Margin="0,0,0,50">
+            <Image Source="Casco.png"
+                   Aspect="AspectFit"
+                   Margin="20,0,0,0" />
+            <Label Text="CONASTRA"
+                   FontSize="Title"
+                   FontAttributes="Bold"
+                   TextColor="Blue"
+                   HorizontalOptions="Start"
+                   Margin="20,0,0,0" />
+        </StackLayout>
+        
+            <Frame VerticalOptions="FillAndExpand"
+                   Margin="15,0,15,15"
+                   CornerRadius="20"
+                   BackgroundColor="#EDEAE6"
+                   >
+              <Grid RowSpacing="15"
+                    Margin="0,30,0,30">
+              <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.4*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                   <RowDefinition Height="*" />
+                        </Grid.RowDefinitions >
+                    <Button   Text="Ingresar" 
+                              BackgroundColor="Aqua"
+                              CornerRadius="10"                            
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Command="{Binding AvanzarPaginaCommand}"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"/>
+                 <Image     Source="Ingresar.png"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            HorizontalOptions="Center"/>
+                 <Button    Text="Actualizar"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding ActualizarCommand}"/>
+                 <Image     Source="Actualizar.png"
+                            Grid.Row="1"
+                            Grid.Column="2" 
+                            HorizontalOptions="Center"/>
+                 <Button    Text="Habilitar /Deshabilitar"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"                            
+                            FontSize="Default"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding ActualizarCommand}"/>
+                 <Image     Source="Habilitar.png"                   
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            HorizontalOptions="Center"/>
+                    <Button Text="Ajustes"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="3"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2" 
+                            Command="{Binding IrAjustes1Command}"/>
+                 <Image     Source="Configuraciones.png"
+                            Grid.Row="3"
+                            Grid.Column="2"
+                            HorizontalOptions="Center" />
+                    <Button Text="Auditoria"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"                            
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="4"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding IrAuditoriaCommand}"/>
+                    <Image  Source="Auditoria.png"
+                            Grid.Row="4"
+                            Grid.Column="2"
+                            HorizontalOptions="Center" />
+                    <Button Text="Volver"
+                            BackgroundColor="Aqua"
+                            CornerRadius="10"                            
+                            FontSize="Title"
+                            TextTransform="None"
+                            FontAttributes="Bold"
+                            TextColor="Blue"
+                            Grid.Row="5"
+                            Grid.Column="1"
+                            Grid.ColumnSpan="2"
+                            Command="{Binding VolverCommand}"/>
+                </Grid>
+                </Frame>
+            
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
